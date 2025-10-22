@@ -1,0 +1,357 @@
+.tarefas-box {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(253, 253, 253);
+    width: 50%;
+    margin: 50px auto;
+    background-color: rgba(106, 90, 205, 0.5);
+    border-radius: 16px;
+    padding: 20px 30px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 1px 1px 10px #6A5ACD;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.tarefas-box input,
+.tarefas-box textarea,
+.tarefas-box select {
+    font-size: 1.4rem !important;
+}
+
+
+.tarefas-box h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.tarefas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.post-it {
+    width: 220px;
+    min-height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    position: relative;
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease-in-out;
+    word-wrap: break-word;
+}
+
+.post-it:hover {
+    transform: scale(1.05);
+}
+
+
+.post-it.urgente {
+    background-color: #ff534a;
+}
+
+.post-it.media {
+    background-color: #ffff45;
+}
+
+.post-it.baixa {
+    background-color: #65ff65;
+}
+
+.post-it.fixada::after {
+    content: "📌";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+}
+
+.post-it h3 {
+    color: rgb(255, 255, 255);
+    text-shadow:0 4px 8px rgba(0, 0, 0, 2);
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-it p {
+    color: #000;
+    font-size: 1.2rem;
+    text-shadow:0 4px 8px rgba(0, 0, 0, 2);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.post-it small {
+    display: block;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-shadow:0 4px 8px rgba(0, 0, 0, 2);
+}
+
+.header-addtask {
+    box-shadow: 1px 1px 10px #6A5ACD;
+}
+
+.header-seetask {
+    box-shadow: 1px 1px 10px #6A5ACD;
+}
+
+.btn-add {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #4636ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #372b8f;
+    transform: scale(1.05);
+}
+
+.tarefas-box input[type="text"],
+.tarefas-box input[type="date"],
+.tarefas-box textarea,
+.tarefas-box select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+
+.tarefas-box input:focus,
+.tarefas-box textarea:focus,
+.tarefas-box select:focus {
+    border-color: #4636ad;
+    box-shadow: 0 0 5px rgba(70, 54, 173, 0.5);
+}
+
+@media (max-width: 768px) {
+    .tarefas-box {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .tarefas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-it {
+        width: 90%;
+        transform: rotate(0deg);
+    }
+}
+
+.btn-conclude {
+    font-size: 1.4rem !important;
+    position: absolute;
+    bottom: 60px !important;
+    right: 20px;
+    background-color: #4636ad !important;
+    color: white;
+    border: none;
+    padding: 8px 12px !important;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+.btn-confirm-c {
+    position: absolute;
+    bottom: 60px;
+    right: 100px; 
+    background-color: #3cb371;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-remover {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4636ad !important;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm-r {
+    position: absolute;
+    bottom: 20px;
+    right: 100px; 
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkbox-remover {
+    transform: scale(1.3);
+    margin-right: 10px;
+}
+
+.div-seetask {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.btn-seetask {
+    background-color: #4636ad;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-seetask:hover {
+    background-color: #4636ad;
+    transform: translateY(-2px);
+}
+
+
+.btn-return {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    background-color: #4636ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.btn-return:hover {
+    background-color: #372b8f;
+    transform: scale(1.05);
+}
+
+.header-seetask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 30px;
+    box-shadow: 1px 1px 10px #6A5ACD;
+    background-color:  #6A5ACD;
+    color: white;
+}
+
+.header-seetask h1 {
+    margin: 0;
+}
+
+.back-area {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.back-area p {
+    margin: 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-seereturn {
+ display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    background-color: #4636ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.btn-seereturn:hover {
+    background-color: #372b8f;
+    transform: scale(1.05);
+}
+.filtro-box {
+    
+    width: 100px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.filtro-box select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #4636ad;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.post-it.concluida {
+    
+    opacity: 0.9;
+}
+.btn-conclude{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: white;
+    padding: 4px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #5e5e5eff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.btn-conclude:active {
+    transform: translateY(0px) scale(0.96);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-conclude:hover {
+    transform: translate(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}

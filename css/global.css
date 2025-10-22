@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+
+	background-image: url("../img/backg1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+header {
+	background-color: #6A5ACD;
+	color: #FFFFFF;
+	font-family: arial;
+	padding-top: 1%;
+	padding-left: 1%;
+	padding-bottom: 0.5%;
+	font-size: 1.6rem;
+	box-shadow: 1px 1px 10px #6A5ACD;
+}
+
+footer {
+	background-color: #6A5ACD;
+	color: #FFFFFF;
+	font-family: arial;
+	padding: 1%;
+	text-align: center;
+	font-size: 1.6rem;
+	margin-bottom: 0px !important;
+}
+
+h1 {
+	color: #FFFFFF;
+	font-size: 3rem;
+	text-shadow: 10px;
+	text-shadow: 1.5px 1.5px 10px #000;
+}
